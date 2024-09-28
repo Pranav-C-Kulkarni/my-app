@@ -63,24 +63,54 @@ export class RightScreenComponent implements OnChanges {
     return this.fileOccurrences[filename]?.count || 0;
   }
 
-  // Recursive function to find folders containing the file
+  // Recursive function to count all files within a folder (including child directories)
+  countFilesInFolder(folder: any, excludeFile?: string): number {
+    let fileCount = 0;
+
+    for (const key in folder) {
+      const item = folder[key];
+
+      // If it's a file, count it (and exclude the specific file if needed)
+      if (item.type === 'file' && key !== excludeFile) {
+        fileCount++;
+      }
+
+      // If it's a directory, recursively count files inside the directory
+      else if (item.type === 'directory') {
+        fileCount += this.countFilesInFolder(item, excludeFile);
+      }
+    }
+
+    return fileCount;
+  }
+
+  // Recursive function to find folders containing the file by filename
   getFoldersRecursive(data: any, filename: string, parentFolder: any = null): any[] {
     let results: any[] = [];
 
+    // Traverse each key in the current directory
     for (const key in data) {
       const item = data[key];
 
+      // If the current item is a file and matches the filename
       if (item.type === 'file' && key === filename) {
         if (parentFolder) {
+          // Count other files including in subfolders
+          const otherFiles = this.countFilesInFolder(data, filename); // Exclude the current file
+
+          // Add folder details if it's part of a folder
           results.push({
             name: parentFolder.name,
             creation_date: parentFolder.creation_date,
-            otherFiles: Object.keys(data).filter(k => data[k].type === 'file' && k !== filename).length
+            otherFiles: otherFiles // Includes child folder files
           });
         }
       } else if (item.type === 'directory') {
-        // Recursively look for the file in the directory
-        results = results.concat(this.getFoldersRecursive(item, filename, { name: key, creation_date: item.modification_date }));
+        // Recursive call if the current item is a directory
+        results = results.concat(this.getFoldersRecursive(item, filename, {
+          name: key,
+          creation_date: item.modification_date
+        }));
       }
     }
 
