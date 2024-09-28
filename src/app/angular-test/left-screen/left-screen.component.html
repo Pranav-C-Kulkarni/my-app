@@ -1,0 +1,19 @@
+<div class="left-screen-container">
+    <ul>
+        <ng-container *ngFor="let node of data | keyvalue">
+            <ng-container *ngIf="node.value && (node.value.type === 'file' || node.value.type === 'directory')">
+                <li>
+                    <ng-container *ngIf="node.value.type === 'directory'">
+                        <span (click)="selectNode(node.value)" class="directory">{{ node.key }}</span>
+                    </ng-container>
+                    <ng-container *ngIf="node.value.type === 'file'">
+                        <span class="file">{{ node.key }}</span>
+                    </ng-container>
+
+                    <app-left-screen [data]="node.value" (nodeSelected)="selectNode($event)">
+                    </app-left-screen>
+                </li>
+            </ng-container>
+        </ng-container>
+    </ul>
+</div>
