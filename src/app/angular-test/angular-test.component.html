@@ -1,0 +1,17 @@
+<div class="container">
+    <header>
+        <h1>Angular Test</h1>
+        <input type="file" (change)="onFileSelected($event)">
+    </header>
+
+    <div class="content">
+        <div class="left-screen">
+            <app-left-screen [data]="fileData" (nodeSelected)="onNodeSelected($event)">
+            </app-left-screen>
+        </div>
+
+        <div class="main-screen">
+            <app-right-screen [data] ="fileData" [files]="filteredFiles"></app-right-screen>
+        </div>
+    </div>
+</div>

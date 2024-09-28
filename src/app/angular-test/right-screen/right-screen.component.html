@@ -1,0 +1,44 @@
+<table *ngIf="getUniqueFiles().length > 0">
+    <thead>
+        <tr>
+            <th>Filename</th>
+            <th>Occurrences</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let file of getUniqueFiles()">
+            <tr (click)="toggleRow(file)" class="clickable-row">
+                <td>{{ file['filename'] }}</td>
+                <td>{{ getOccurrences(file['filename']) }}</td>
+                <td>{{ file['modification_date'] }}</td>
+            </tr>
+
+            <!-- Expanded row -->
+            <!-- Expanded row -->
+            <tr *ngIf="expandedFile === file">
+                <td colspan="3">
+                    <table class="folder-details">
+                        <thead>
+                            <tr>
+                                <th>Folder Name</th>
+                                <th>Creation Date</th>
+                                <th>Other Files</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let folder of getFolders(file['filename'])">
+                                <tr>
+                                    <td>{{ folder.name }}</td>
+                                    <td>{{ folder.creation_date }}</td>
+                                    <td>{{ folder.otherFiles }}</td>
+                                </tr>
+                            </ng-container>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+<div *ngIf="getUniqueFiles().length === 0">No files available.</div>
