@@ -21,19 +21,25 @@ th {
     transition: background-color 0.3s;
 }
 
+.clickable-row:hover {
+    color: #0056b3;
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
 .highlight {
-    background-color: #e7f1ff; /* Light blue on hover or active */
+    background-color: #e7f1ff;
 }
 
 .expanded-row {
-    background-color: #f9f9f9; /* Slightly different color for the expanded row */
+    background-color: #f9f9f9;
 }
 
 ul {
     padding-left: 20px;
-    list-style-type: none; /* Remove bullets from list */
+    list-style-type: none;
 }
 
 ul li {
-    margin: 4px 0; /* Space between list items */
+    margin: 4px 0;
 }
