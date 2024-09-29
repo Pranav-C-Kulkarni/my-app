@@ -26,9 +26,8 @@ export class AngularTestComponent {
     }
   }
 
-  // Extract file details recursively
   extractFiles(data: any, path = ''): Array<{ [key: string]: any }> {
-    const files: Array<{ [key: string]: any }> = []; // Initialize as empty array
+    const files: Array<{ [key: string]: any }> = [];
     for (const key in data) {
         if (data[key].type === 'file') {
             files.push({
@@ -41,7 +40,7 @@ export class AngularTestComponent {
             files.push(...this.extractFiles(data[key], path + '/' + key));
         }
     }
-    return files; // Now can return empty array if no files found
+    return files;
 }
 
   onNodeSelected(node: any) {
