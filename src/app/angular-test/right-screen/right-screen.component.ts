@@ -71,7 +71,7 @@ export class RightScreenComponent implements OnChanges {
           results.push({
             name: parentFolder.name,
             creation_date: parentFolder.creation_date,
-            otherFiles: Object.keys(data).filter(k => data[k].type === 'file' && k !== filename).length // Number of other files in folder
+            otherFiles: Object.keys(data).filter(k => data[k].type === 'file' && k !== filename).length
           });
         }
       } else if (item.type === 'directory') {

@@ -29,19 +29,19 @@ export class AngularTestComponent {
   extractFiles(data: any, path = ''): Array<{ [key: string]: any }> {
     const files: Array<{ [key: string]: any }> = [];
     for (const key in data) {
-        if (data[key].type === 'file') {
-            files.push({
-                filename: key,
-                path: path + '/' + key,
-                modification_date: data[key].modification_date,
-                hash: data[key].hash,
-            });
-        } else if (data[key].type === 'directory') {
-            files.push(...this.extractFiles(data[key], path + '/' + key));
-        }
+      if (data[key].type === 'file') {
+        files.push({
+          filename: key,
+          path: path + '/' + key,
+          modification_date: data[key].modification_date,
+          hash: data[key].hash,
+        });
+      } else if (data[key].type === 'directory') {
+        files.push(...this.extractFiles(data[key], path + '/' + key));
+      }
     }
     return files;
-}
+  }
 
   onNodeSelected(node: any) {
     this.filteredFiles = this.extractFiles(node);
