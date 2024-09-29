@@ -14,4 +14,4 @@ TypeScript: 5.6.2
 2) Do npm install.
 3) Run the app : npm run start.
 
-Please let me know if you need any issues while setup. Thank you!
+Please let me know if you have any issues while setup. Thank you!
