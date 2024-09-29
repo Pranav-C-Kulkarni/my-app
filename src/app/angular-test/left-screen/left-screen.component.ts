@@ -12,17 +12,8 @@ import { AngularTestComponent } from '../angular-test.component';
 export class LeftScreenComponent {
   @Input() data: { [key: string]: any } | undefined;
   @Output() nodeSelected = new EventEmitter<any>();
-  isExpanded: boolean = false;
 
   selectNode(node: any) {
-    // if (this.isExpanded) {
-      this.nodeSelected.emit(node);
-    //   console.log(node)
-    // }
-  }
-
-  toggleNode(nodeValue: any) {
-    nodeValue.isExpanded = !nodeValue.isExpanded;
-    this.isExpanded = nodeValue.isExpanded;
+    this.nodeSelected.emit(node);
   }
 }

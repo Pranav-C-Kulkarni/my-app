@@ -13,8 +13,6 @@
                 <td>{{ getOccurrences(file['filename']) }}</td>
                 <td>{{ file['modification_date'] }}</td>
             </tr>
-
-            <!-- Expanded row -->
             <!-- Expanded row -->
             <tr *ngIf="expandedFile === file">
                 <td colspan="3">

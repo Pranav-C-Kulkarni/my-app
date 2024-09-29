@@ -7,7 +7,7 @@ import { AngularTestComponent } from '../angular-test.component';
   standalone: true,
   imports: [CommonModule, AngularTestComponent],
   templateUrl: './right-screen.component.html',
-  styleUrls: ['./right-screen.component.css'] // Corrected `styleUrl` to `styleUrls`
+  styleUrls: ['./right-screen.component.css']
 })
 export class RightScreenComponent implements OnChanges {
   @Input() data: { [key: string]: any } | undefined;
@@ -28,15 +28,13 @@ export class RightScreenComponent implements OnChanges {
         const modificationDate = new Date(file['modification_date']);
 
         if (this.fileOccurrences[filename]) {
-          // Update the count and check for the latest modification date
           this.fileOccurrences[filename].count++;
           const existingDate = new Date(this.fileOccurrences[filename].latestFile.modification_date);
 
           if (modificationDate > existingDate) {
-            this.fileOccurrences[filename].latestFile = file; // Update to the latest file
+            this.fileOccurrences[filename].latestFile = file;
           }
         } else {
-          // Initialize with count 1 and current file
           this.fileOccurrences[filename] = { count: 1, latestFile: file };
         }
       });
@@ -48,7 +46,7 @@ export class RightScreenComponent implements OnChanges {
 
     for (const filename in this.fileOccurrences) {
       if (this.fileOccurrences.hasOwnProperty(filename)) {
-        uniqueFiles.push(this.fileOccurrences[filename].latestFile); // Only push the latest file
+        uniqueFiles.push(this.fileOccurrences[filename].latestFile);
       }
     }
 
@@ -63,18 +61,13 @@ export class RightScreenComponent implements OnChanges {
     return this.fileOccurrences[filename]?.count || 0;
   }
 
-  // Recursive function to find folders containing the file
   getFoldersRecursive(data: any, filename: string, parentFolder: any = null): any[] {
     let results: any[] = [];
 
-    // Traverse each key in the current directory
     for (const key in data) {
       const item = data[key];
-
-      // If the current item is a file and matches the filename
       if (item.type === 'file' && key === filename) {
         if (parentFolder) {
-          // Add folder details if it's part of a folder
           results.push({
             name: parentFolder.name,
             creation_date: parentFolder.creation_date,
@@ -82,14 +75,12 @@ export class RightScreenComponent implements OnChanges {
           });
         }
       } else if (item.type === 'directory') {
-        // Recursive call if the current item is a directory
         results = results.concat(this.getFoldersRecursive(item, filename, { name: key, creation_date: item.modification_date }));
       }
     }
     return results;
   }
 
-  // Function to get folders containing the file
   getFolders(filename: string): any[] {
     return this.getFoldersRecursive(this.data, filename);
   }

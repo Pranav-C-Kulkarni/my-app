@@ -1,4 +1,3 @@
-/* Container styles */
 .container {
     display: flex;
     flex-direction: column;
@@ -11,7 +10,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Content Section */
 .content {
     display: flex;
     flex-direction: row;
@@ -23,10 +21,9 @@
     justify-content: flex-start;
     background: #fff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Makes content responsive on small screens */
+    flex-wrap: wrap;
 }
 
-/* Left Screen Section */
 .left-screen, .main-screen {
     border: 2px solid #000;
     padding: 16px;
@@ -34,11 +31,10 @@
     border-radius: 8px;
     background: #f1f1f1;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Allows screens to grow and shrink dynamically */
-    min-width: 250px; /* Prevents shrinking too small */
+    flex: 1;
+    min-width: 250px;
 }
 
-/* Responsive Text and Headers */
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
@@ -51,17 +47,15 @@ input[type="file"] {
     font-size: 1em;
 }
 
-/* Adding Hover Effects */
 .left-screen:hover, .main-screen:hover {
     background-color: #e7f0fd;
     border-color: #007bff;
     transition: all 0.3s ease-in-out;
 }
 
-/* Small screen adjustments */
 @media (max-width: 768px) {
     .content {
-        flex-direction: column; /* Stacks screens on small devices */
+        flex-direction: column;
     }
     
     .container {
@@ -74,3 +68,4 @@ input[type="file"] {
         padding: 12px;
     }
 }
+
