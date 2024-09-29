@@ -1,0 +1,168 @@
+{
+    "Tietoevry": {
+        "type": "directory",
+        "modification_date": "2024-09-08 08:26:45",
+        "Evry": {
+            "type": "directory",
+            "modification_date": "2024-09-08 08:27:56",
+            "Code": {
+                "type": "directory",
+                "modification_date": "2024-09-08 08:28:10",
+                "Repository": {
+                    "type": "directory",
+                    "modification_date": "2024-09-08 08:28:36",
+                    "C": {
+                        "type": "directory",
+                        "modification_date": "2024-09-08 17:55:47",
+                        "code.cpp": {
+                            "type": "file",
+                            "modification_date": "2024-09-08 08:31:17",
+                            "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                        },
+                        "code.h": {
+                            "type": "file",
+                            "modification_date": "2024-09-08 08:30:59",
+                            "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                        }
+                    },
+                    "Java": {
+                        "type": "directory",
+                        "modification_date": "2024-09-08 17:58:58",
+                        "com": {
+                            "type": "directory",
+                            "modification_date": "2024-09-08 17:59:06",
+                            "edb": {
+                                "type": "directory",
+                                "modification_date": "2024-09-08 17:59:28",
+                                "finance": {
+                                    "type": "directory",
+                                    "modification_date": "2024-09-08 17:59:40",
+                                    "old.java": {
+                                        "type": "file",
+                                        "modification_date": "2024-09-08 17:56:44",
+                                        "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                                    }
+                                },
+                                "main.java": {
+                                    "type": "file",
+                                    "modification_date": "2024-09-08 17:56:44",
+                                    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                                },
+                                "old.java": {
+                                    "type": "file",
+                                    "modification_date": "2024-09-08 17:56:44",
+                                    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                                }
+                            }
+                        },
+                        "main.java": {
+                            "type": "file",
+                            "modification_date": "2024-09-08 17:56:44",
+                            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                        },
+                        "old.java": {
+                            "type": "file",
+                            "modification_date": "2024-09-08 17:56:44",
+                            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                        }
+                    }
+                }
+            }
+        },
+        "Tieto": {
+            "type": "directory",
+            "modification_date": "2024-09-08 08:27:30",
+            "CodeRepository": {
+                "type": "directory",
+                "modification_date": "2024-09-08 08:29:04",
+                "C": {
+                    "type": "directory",
+                    "modification_date": "2024-09-08 18:00:38",
+                    "code.h": {
+                        "type": "file",
+                        "modification_date": "2024-09-08 08:30:59",
+                        "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                    },
+                    "good": {
+                        "type": "directory",
+                        "modification_date": "2024-09-08 18:01:31",
+                        "code.c": {
+                            "type": "file",
+                            "modification_date": "2024-09-08 08:31:17",
+                            "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                        },
+                        "old": {
+                            "type": "directory",
+                            "modification_date": "2024-09-08 18:01:38",
+                            "code.h": {
+                                "type": "file",
+                                "modification_date": "2024-09-08 08:30:59",
+                                "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                            },
+                            "days": {
+                                "type": "directory",
+                                "modification_date": "2024-09-08 18:01:18",
+                                "code.c": {
+                                    "type": "file",
+                                    "modification_date": "2024-09-08 08:31:17",
+                                    "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                                },
+                                "code.h": {
+                                    "type": "file",
+                                    "modification_date": "2024-09-08 08:30:59",
+                                    "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                                }
+                            }
+                        }
+                    }
+                },
+                "C++": {
+                    "type": "directory",
+                    "modification_date": "2024-09-08 18:02:04",
+                    "code.c++": {
+                        "type": "file",
+                        "modification_date": "2024-09-08 08:31:17",
+                        "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                    },
+                    "code.h": {
+                        "type": "file",
+                        "modification_date": "2024-09-08 08:30:59",
+                        "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                    },
+                    "long": {
+                        "type": "directory",
+                        "modification_date": "2024-09-08 18:02:16",
+                        "code.h": {
+                            "type": "file",
+                            "modification_date": "2024-09-08 08:30:59",
+                            "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                        },
+                        "time": {
+                            "type": "directory",
+                            "modification_date": "2024-09-08 18:02:43",
+                            "ago": {
+                                "type": "directory",
+                                "modification_date": "2024-09-08 18:02:31",
+                                "code.h": {
+                                    "type": "file",
+                                    "modification_date": "2024-09-08 08:30:59",
+                                    "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                                }
+                            },
+                            "code.c++": {
+                                "type": "file",
+                                "modification_date": "2024-09-08 08:31:17",
+                                "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                            },
+                            "code.h": {
+                                "type": "file",
+                                "modification_date": "2024-09-08 08:30:59",
+                                "hash": "ff82dae125af1b4d7cee247e75934c1658040ba4814b4e542b40ed5dc8b4b120"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
